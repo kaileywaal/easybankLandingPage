@@ -151,7 +151,6 @@ nav a {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 150px;
-    max-width: 200px;
 }
 
 #section3 {
@@ -198,7 +197,6 @@ footer {
     padding: 6vw 10vw 0 10vw;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
 }
 
 footer a {
@@ -206,7 +204,6 @@ footer a {
     color: var(--white);
     font-weight: 300;
     font-size: 14px;
-    padding: 2vw;
 }
 
 .filter {
@@ -219,8 +216,9 @@ footer a {
 
 #extraLinks {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
+    width: 30vw;
 }
 
 footer button {
@@ -237,11 +235,14 @@ footer button {
     font-size: 10px; 
     text-align: center;
     color: var(--grayishBlue);
+    background-color: var(--darkBlue);
 }
 
 .attribution a {
     font-size: 10px;
     padding: 0;
+    text-decoration: none;
+    color: var(--grayishBlue);
 }
 
     
@@ -324,16 +325,16 @@ footer button {
 
     .subSection {
         display: flex;
-        flex-direction: row;
+        width: 80vw;
+        flex-direction: column;
         justify-content: center;
-        margin: 10vw auto;
+        margin: auto;
     }
 
-    .subSection div {
-        flex-basis: 80%;
-        text-align: center;
-        flex-shrink: none;
-    }
+    .whyEasybank {
+        width: 80vw;
+        padding: 4vw;
+    }    
     
     article {
         flex-basis: 100%;
@@ -341,6 +342,8 @@ footer button {
 
     article img {
         width: 100%;
+        height: 60%;
+        object-fit: cover;  
     }
 
     .articleText {
@@ -349,9 +352,65 @@ footer button {
 
 /* FOOTER */
     footer {
-        display: block;
+        background-color: var(--darkBlue);
+        color: var(--white);
+        padding: 6vw 10vw 0 10vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
         text-align: center;
+        display: block;
     }
+    
+    footer a {
+        text-decoration: none;
+        color: var(--white);
+        font-weight: 300;
+        font-size: 14px;
+        padding: 2vw;
+    }
+    
+    .filter {
+        filter: invert(94%) sepia(100%) saturate(8%) hue-rotate(133deg) brightness(104%) contrast(103%);
+    }
+    
+    #socialMediaLinks {
+        padding: 4vw;
+    }
+    
+    #extraLinks .column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #extraLinks {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    footer button {
+        margin: 4vw;
+    }
+    
+    #copyright {
+        font-size: 10px;
+        color: var(--grayishBlue);
+        padding-bottom: 4vw;
+    }
+    
+    .attribution {
+        font-size: 10px; 
+        text-align: center;
+        color: var(--grayishBlue);
+    }
+    
+    .attribution a {
+        font-size: 10px;
+        padding: 0;
+    }
+
+
 }
 
 @media only screen and (max-width: 800px) {
