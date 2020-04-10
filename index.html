@@ -7,51 +7,61 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Easybank Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 <nav>
   <img src="images/logo.svg" alt="easybank logo">
 
-  <a href = "index.html">Home</a>
-  <a href = "">About</a>
-  <a href = "">Contact</a>
-  <a href = "">Blog</a>
-  <a href = "">Careers</a>
+  <div id = "navButtons">
+    <a href = "index.html">Home</a>
+    <a href = "">About</a>
+    <a href = "">Contact</a>
+    <a href = "">Blog</a>
+    <a href = "">Careers</a>
+  </div>
 
   <button>Request Invite</button>
 </nav>
 
 <main>
-  <section class = "mainSection">
-    <h1>
-      Next generation digital banking
-    </h1>
-    <p>
-      Take your financial life online. Your Easybank account will be a one-stop-shop 
-      for spending, saving, budgeting, investing, and much more.
-    </p>
-    <button>
-      Request Invite
-    </button>
+  <section class = "mainSection" id = "section1">
+    <div id = "topPhotos">
+      <img src="images/image-mockups.png" alt="phone mockups of app" id = "topMockup">
+    </div>
+    <div id = "sectionOneContent">
+      <h1>
+        Next generation digital banking
+      </h1>
+      <p>
+        Take your financial life online. Your Easybank account will be a one-stop-shop 
+        for spending, saving, budgeting, investing, and much more.
+      </p>
+      <button>
+        Request Invite
+      </button>
+    </div>
+    <div id = "sectionOneImages">
+      <img src="images/bg-intro-desktop.svg" alt="background" class = "background">
+      <img src="images/image-mockups.png" alt="phone mockups of app" id = "mockup">
+    </div>
   </section>
 
-  <section class = "mainSection">
+
+
+  <section class = "mainSection" id = "section2">
     <h2>
       Why choose Easybank?
     </h2>
     <p>
       We leverage Open Banking to turn your bank account into your financial hub. 
-      </br>
+    </br>
       Control your finances like never before.
     </p>
     <div class = "subSection">
-      <div>
+      <div class = "whyEasybank">
         <img src="images/icon-online.svg" alt="online banking icon">
         <h3>
           Online Banking
@@ -62,7 +72,7 @@
         </p>
       </div>
 
-      <div>
+      <div class = "whyEasybank">
         <img src="images/icon-budgeting.svg" alt="simple budgeting icon">
         <h3>
           Simple Budgeting
@@ -73,7 +83,7 @@
         </p>
       </div>
       
-      <div>
+      <div class = "whyEasybank">
         <img src="images/icon-onboarding.svg" alt="fast onboarding icon">
         <h3>
           Fast Onboarding
@@ -84,7 +94,7 @@
         </p>
       </div>
 
-      <div>
+      <div class = "whyEasybank">
         <img src="images/icon-api.svg" alt="open API icon">
         <h3>
           Open API
@@ -98,71 +108,77 @@
     </div>
   </section>
     
-  <section class = "mainSection">
+  <section class = "mainSection" id = "section3">
     <h1> 
       Latest Articles
     </h1>
-    <div class = "subSection">
+    <div class = "subSection" id = "section3Subsection">
       <article>
         <img src="images/image-currency.jpg" alt="Various currencies">
-        <div>
+          <div class = "articleText">
+            <h2>
+              By Claire Robinson
+            </h2>
+            <h1>
+              Receive money in any currency with no fees
+            </h1>
+            <p>
+              The world is getting smaller and we’re becoming more mobile. So why should you be 
+              forced to only receive money in a single …
+            </p>
+          </div>
+      </article>
+      <article>
+        <img src="images/image-restaurant.jpg" alt="Spread of food and drinks at a restaurant">
+        <div class = "articleText">  
           <h2>
-            By Claire Robinson
+            By Wilson Hutton
           </h2>
           <h1>
-            Receive money in any currency with no fees
+            Treat yourself without worrying about money
           </h1>
           <p>
-            The world is getting smaller and we’re becoming more mobile. So why should you be 
-            forced to only receive money in a single …
+            Our simple budgeting feature allows you to separate out your spending and set 
+            realistic limits each month. That means you …
+          </p> 
+        </div>
+      </article>
+      <article>
+        <img src="images/image-plane.jpg" alt="View of sky and airplane wing from in the air">
+        <div class = "articleText">  
+          <h2>
+            By Wilson Hutton
+          </h2>
+          <h1>
+            Take your Easybank card wherever you go
+          </h1>
+          <p>
+            We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
+            while you’re abroad. We’ll even show you …
           </p>
         </div>
       </article>
       <article>
-        <img src="images/image-restaurant.jpg" alt="Spread of food and drinks at a restaurant">
-        <h2>
-          By Wilson Hutton
-        </h2>
-        <h1>
-          Treat yourself without worrying about money
-        </h1>
-        <p>
-          Our simple budgeting feature allows you to separate out your spending and set 
-          realistic limits each month. That means you …
-        </p> 
-      </article>
-      <article>
-        <img src="images/image-plane.jpg" alt="View of sky and airplane wing from in the air">
-        <h2>
-          By Wilson Hutton
-        </h2>
-        <h1>
-          Take your Easybank card wherever you go
-        </h1>
-        <p>
-          We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
-          while you’re abroad. We’ll even show you …
-        </p>
-      </article>
-      <article>
         <img src="images/image-confetti.jpg" alt="Confetti on a blue background">
-        <h2>
-          By Claire Robinson
-        </h2>
-        <h1>
-          Our invite-only Beta accounts are now live!
-        </h1>
-        <p>
-          After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
-          It’s easy to request an invite through the site ...
-        </p>
+        <div class = "articleText">  
+          <h2>
+            By Claire Robinson
+          </h2>
+          <h1>
+            Our invite-only Beta accounts are now live!
+          </h1>
+          <p>
+            After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
+            It’s easy to request an invite through the site ...
+          </p>
+        </div>  
       </article>
     </div>  
   </section>
 </main>
   
 <footer>
-  <a href="index.html">
+  <a href="index.html" class = "filter" alt = "Easybank Logo">
     <img src="images/logo.svg" alt="easybank logo">
   </a>
   <div id = "socialMediaLinks">
@@ -201,7 +217,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Kailey Waal</a>.
   </div>
 </body>
 </html>
