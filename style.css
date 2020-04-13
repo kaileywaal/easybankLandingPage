@@ -16,6 +16,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Public Sans', sans-serif;
+    font-weight: 300;
 }
 
 html {
@@ -30,7 +31,6 @@ button {
     color: white;
     background-image: linear-gradient(.25turn, var(--limeGreen), var(--brightCyan));
     padding: 1.5vw 3vw;
-    font-family: 'Public Sans', sans-serif;
     outline: none;
     border: none;
     border-radius: 100px;
@@ -46,7 +46,6 @@ button:hover {
 .mainSection h1,
 .mainSection h2,
 .mainSection h3 {
-    font-weight: 300;
     color: var(--darkBlue);
     margin: 2vw 0;
 }
@@ -58,7 +57,6 @@ button:hover {
 .mainSection p {
     font-size: 14px;
     color: var(--grayishBlue);
-    font-weight: 300;
     margin: 2vw 0;
 }
 
@@ -86,8 +84,7 @@ nav a {
     color: var(--grayishBlue);
     text-decoration: none;
     font-size: 14px;
-    padding: 0 1vw 0 1vw;
-    height: 50px;
+    padding: 0 1vw;
     line-height: 50px;
 }
 
@@ -121,6 +118,17 @@ nav button {
 .mainSection {
     padding: 0 10vw;
     overflow-x: hidden;
+}
+
+#section1, 
+#section3 {
+    background-color: var(--veryLightGray);
+}
+
+#section2 {
+    padding: 6vw 10vw;
+    background-color: var(--lightGrayishBlue);
+    overflow-y: hidden;
 }
 
 #topPhotos {
@@ -162,15 +170,6 @@ nav button {
     left: 50%;
 }
 
-#section1, #section3 {
-    background-color: var(--veryLightGray);
-}
-
-#section2 {
-    padding: 6vw 10vw;
-    background-color: var(--lightGrayishBlue);
-}
-
 .subSection {
     display: flex;
     flex-direction: row;
@@ -189,18 +188,17 @@ nav button {
 
 #section3 {
     padding: 10vw;
+    overflow-y: hidden;
 }
 
 article {
-    flex-basis: 23%;
+    flex-basis: 25%;
     flex-shrink: 1;
     flex-grow: 1;
     padding: 10px;
 }
 
 article:hover {
-    transform: scale(1.05);
-    transition-duration: 0.5s;
     cursor: pointer;
 }
 
@@ -266,12 +264,12 @@ footer a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 30vw;
+    width: 12em;
 }
 
 footer a:hover {
     color: var(--brightCyan);
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 } 
 
 footer button {
@@ -298,7 +296,6 @@ footer button {
     color: var(--grayishBlue);
 }
 
-    
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 500px) {
@@ -306,7 +303,6 @@ footer button {
     button {
         padding: 3vw 5vw;
     }
-    /* TYPOGRAPHY */
 
     /* NAVIGATION */
     #navButtons {
@@ -343,7 +339,6 @@ footer button {
         transition-duration: color 0.5s border 0.1s;
         border-bottom: 4px solid var(--brightCyan);
     }
-
 
     /* MAIN */
     .mainSection {
@@ -427,33 +422,55 @@ footer button {
     }
 
 /* FOOTER */
+    footer a {
+        padding: 2vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    /* GENERAL */
+    button {
+        font-size: 14px;
+        padding: 2vw 5vw;
+    }
+
+    /* NAVIGATION */
+    nav {
+        padding: 2vw;
+        height: 50px; 
+    }
+
+    nav button {
+        visibility: hidden;
+        position: absolute;
+        margin-right: 4vw;
+    }
+
+    /* MAIN */
+    article {
+        flex-basis: 50%;
+        align-self: start;
+        margin-bottom: 10px;
+    }
+
+    #section3Subsection h1 {
+        font-size: 18px;
+    }
+    
+    #section3Subsection h2,
+    #section3Subsection p {
+        font-size: 14px;
+    }
+    /*FOOTER*/
     footer {
-        background-color: var(--darkBlue);
-        color: var(--white);
-        padding: 6vw 10vw 0 10vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
         text-align: center;
         display: block;
     }
     
     footer a {
-        text-decoration: none;
-        color: var(--white);
-        font-weight: 300;
-        font-size: 14px;
-        padding: 2vw;
+        padding: 0.5vw;
     }
-    
-    .filter {
-        filter: invert(94%) sepia(100%) saturate(8%) hue-rotate(133deg) brightness(104%) contrast(103%);
-    }
-    
-    #socialMediaLinks {
-        padding: 4vw;
-    }
-    
+
     #extraLinks .column {
         display: flex;
         flex-direction: column;
@@ -485,64 +502,9 @@ footer button {
         font-size: 10px;
         padding: 0;
     }
-
-
-}
-
-@media only screen and (max-width: 800px) {
-    /* GENERAL */
-    button {
-        font-size: 14px;
-        padding: 2vw 5vw;
-    }
-    /* TYPOGRAPHY */
-
-    /* NAVIGATION */
-    nav {
-        padding: 2vw;
-        height: 50px; 
-    }
-
-    /* /* #navButtons {
-        visibility: hidden;
-    } */
-
-    nav button {
-        visibility: hidden;
-        position: absolute;
-        margin-right: 4vw;
-    }
-
-    /* #menu-toggle {
-        visibility: visible;
-        right: 0;
-    } */ */
-
-    /* MAIN */
-    article {
-        flex-basis: 50%;
-        align-self: start;
-        margin-bottom: 10px;
-    }
-
-    #section3Subsection h1 {
-        font-size: 18px;
-    }
-    
-    #section3Subsection h2,
-    #section3Subsection p {
-        font-size: 14px;
-    }
-
 }
 
 @media only screen and (max-width: 1200px) {
-    /* GENERAL */
-
-    /* TYPOGRAPHY */
-
-    /* NAVIGATION */
-
     /* MAIN */
     #mockup {
         position: absolute;
@@ -590,5 +552,4 @@ footer button {
         padding: 0;
         text-align: left;
     }
-    /* FOOTER */
 }

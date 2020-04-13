@@ -1,4 +1,4 @@
-//toggle menu open and closed when hamburger button is clicked
+//TOGGLE HAMBURGER MENU
 function toggleMenu() {
     let classes = document.getElementById("toggleNavButtons").classList;
     if(classes.contains("hidden")){
@@ -10,40 +10,36 @@ function toggleMenu() {
     }   
 }
 
-//load portions of page on scrolling
-
-
-
+//LOAD PORTIONS OF SCREEN ON SCROLLING
 
 var controller = new ScrollMagic.Controller();
 
+//create function for scrollmagic scenes
 function createScrollMagicScene(trigger, animatedElement) {
-    let transition = gsap.from(animatedElement, 1, {y: 200, opacity: 0});
+    let transition = gsap.from(animatedElement, 1, {y: 100, opacity: 0});
     new ScrollMagic.Scene({
         triggerElement: trigger,
+        triggerHook: 0.75,
         reverse: false
     }) 
+        // .addIndicators()
         .setTween(transition)
         .addTo(controller);
 }
 
-createScrollMagicScene("#section2", ".whyEasybank");
-createScrollMagicScene("#section3", "article");
+//create function to create scrollmagic scene based on window width
+function multipleScrollMagicScenes(trigger, className) {
+    if(window.innerWidth <= 1200) {
+        let elements = Array.from(document.querySelectorAll(className));
+        elements.forEach(element => {createScrollMagicScene(element, element)});
+    } else {
+        createScrollMagicScene(trigger, className);
+    }
+}
 
-// let whyEasybankTransition = gsap.from('.whyEasybank', 1, {y: 200, opacity: 0});
+//call functions to create scrollmagic scenes
 
-// new ScrollMagic.Scene({
-//     triggerElement: "#section2",
-//     reverse: false
-// }) 
-//     .setTween(whyEasybankTransition)
-//     .addTo(controller);
-
-// let articleTransition = gsap.from('article', 1, {y: 200, opacity: 0});
-
-// new ScrollMagic.Scene({
-//     triggerElement: "#section3",
-//     reverse: false
-// }) 
-//     .setTween(articleTransition)
-//     .addTo(controller)
+multipleScrollMagicScenes("#section2", "#whyEasybankTitle");
+multipleScrollMagicScenes("#section2", ".whyEasybank");
+multipleScrollMagicScenes("#section3", "#latestArticlesTitle");
+multipleScrollMagicScenes("section3", "article");
